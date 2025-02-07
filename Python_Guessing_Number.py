@@ -8,9 +8,15 @@ is_running = True
 
 print("---------------Python Number Guessing Game---------------")
 print(f"Select a number between {lowest_num} and {highest_num}")
+print("Enter q to quit the game")
 
 while is_running:
     guess = input("Enter your guess: ")
+
+    if guess.lower() == 'q':
+        print("Thanks for playing! Goodbye!")
+        break  # Keluar dari loop
+
     if guess.isdigit():
         guess = int(guess)
         guesses += 1
